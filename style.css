@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* More modern font */
+    font-weight: normal;
+    /* Slightly lighter default weight */
+}
+
+html {
+    height: 100%;
+    background: #f0f0f0;
+    /* Light gray background */
+    display: flex;
+    /* Center the calculator */
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    width: 320px;
+    /* Slightly adjusted width */
+    height: auto;
+    padding: 25px;
+    /* More padding */
+    background: #333;
+    /* Dark background for contrast */
+    border-radius: 10px;
+    /* More rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Softer shadow */
+}
+
+.top {
+    display: flex;
+    /* Align clear and screen horizontally */
+    margin-bottom: 20px;
+    /* More space below the screen */
+}
+
+#clear {
+    flex-grow: 1;
+    /* Clear button takes up more width */
+    position: relative;
+    cursor: pointer;
+    height: 45px;
+    /* Slightly taller button */
+    background: #ff6b6b;
+    /* Reddish clear button */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 18px;
+    /* Slightly larger font */
+    line-height: 45px;
+    text-align: center;
+    user-select: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    /* Smoother transitions */
+    margin-right: 10px;
+    /* Space between clear and screen */
+}
+
+#clear:hover {
+    background: #e05252;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#clear:active {
+    transform: translateY(1px);
+    /* Slight downward push on click */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#screen {
+    width: 200px;
+    /* Adjusted width */
+    height: 45px;
+    /* Slightly taller screen */
+    padding: 0 15px;
+    background: #444;
+    /* Darker screen background */
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    /* Larger font size for display */
+    line-height: 45px;
+    color: #eee;
+    /* Light text color */
+    text-align: right;
+    letter-spacing: 1px;
+    overflow: hidden;
+    /* Prevent text overflow */
+}
+
+.keys {
+    display: grid;
+    /* Use grid layout for better control */
+    grid-template-columns: repeat(4, 1fr);
+    /* Four equal columns */
+    grid-gap: 10px;
+    /* Spacing between keys */
+}
+
+.keys span {
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    /* Taller keys */
+    background: #e0e0e0;
+    /* Light gray keys */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    /* Remove individual margins, grid handles spacing */
+    color: #333;
+    /* Dark text color */
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    user-select: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.keys span.operator {
+    background: #ffa000;
+    /* Orange operator keys */
+    color: white;
+}
+
+.keys span.eval {
+    background: #4caf50;
+    /* Green evaluate key */
+    box-shadow: 0px 2px #43a047;
+    color: white;
+}
+
+.keys span:hover {
+    background: #d0d0d0;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.keys span:active {
+    transform: translateY(1px);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.keys span.operator:hover {
+    background: #e68a00;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.keys span.operator:active {
+    transform: translateY(1px);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.keys span.eval:hover {
+    background: #388e3c;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.keys span.eval:active {
+    transform: translateY(1px);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ... Previous CSS ... */
+
+body {
+    background: #e6e6fa;
+    /* Light lavender background */
+}
+
+#calculator {
+    width: 340px;
+    /* Slightly wider */
+    height: auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f0f7, #e8e8f0);
+    /* Soft gradient */
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.8);
+}
+
+.top {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#clear {
+    flex-grow: 1;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    background: linear-gradient(135deg, #ff7f7f, #f56262);
+    /* Red gradient */
+    border-radius: 8px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 19px;
+    line-height: 50px;
+    text-align: center;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    margin-right: 15px;
+}
+
+#clear:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+#clear:active {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+
+#screen {
+    width: 220px;
+    height: 50px;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.05);
+    font-size: 22px;
+    line-height: 50px;
+    color: #444;
+    text-align: right;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+.keys span {
+    position: relative;
+    cursor: pointer;
+    height: 55px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    color: #555;
+    font-size: 20px;
+    line-height: 55px;
+    text-align: center;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.keys span.operator {
+    background: linear-gradient(135deg, #ffc14d, #f7b03e);
+    /* Orange gradient */
+    color: white;
+}
+
+.keys span.eval {
+    background: linear-gradient(135deg, #81c784, #66bb6a);
+    /* Green gradient */
+    color: white;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.keys span:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.keys span:active {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+
+/* ... (adjust hover and active styles for operators and eval) ... */
